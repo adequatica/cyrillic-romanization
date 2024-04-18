@@ -1,0 +1,30 @@
+{
+  "include": ["index.ts"],
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "declaration": true,
+    "noEmit": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "removeComments": true,
+    "moduleResolution": "node"
+  },
+  "tsc-alias": {
+    "verbose": false,
+    "resolveFullPaths": true,
+    "replacers": {},
+    "fileExtensions": {
+      "inputGlob": "{js,jsx,mjs}",
+      "outputCheck": ["js", "json", "jsx", "mjs"]
+    }
+  }
+}
