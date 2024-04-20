@@ -3,7 +3,7 @@ import { mappingAlphabet } from 'mapping';
 export default function cyrillicToLatin(
   input: string,
   // Code names of languages according to ISO 639-2:1998
-  language?: 'bul' | 'cnr' | 'mkd' | 'srp' | 'iso9',
+  language?: 'bul' | 'cnr' | 'mkd' | 'mon' | 'srp' | 'iso9',
 ): string {
   let newString = '';
 
@@ -25,6 +25,8 @@ export default function cyrillicToLatin(
       newString += mappingAlphabet.montenegrin[char] || char;
     } else if (language === 'mkd') {
       newString += mappingAlphabet.macedonian[char] || char;
+    } else if (language === 'mon') {
+      newString += mappingAlphabet.mongolian[char] || char;
     } else if (language === 'srp') {
       newString += mappingAlphabet.serbian[char] || char;
     } else {
