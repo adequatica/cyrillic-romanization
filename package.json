@@ -1,7 +1,7 @@
 {
   "name": "cyrillic-romanization",
-  "version": "1.1.1",
-  "description": "Convert Cyrillic characters to Latin characters",
+  "version": "1.1.2",
+  "description": "Convert Cyrillic characters to Latin characters (transliteration)",
   "keywords": [
     "bulgarian",
     "cyrillic",
