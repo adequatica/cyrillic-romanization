@@ -3,7 +3,7 @@ import { mappingAlphabet } from 'mapping';
 export default function cyrillicToLatin(
   input: string,
   // Code names of languages according to ISO 639-2:1998
-  language?: 'bul' | 'cnr' | 'mkd' | 'mon' | 'srp' | 'iso9',
+  language?: 'bul' | 'cnr' | 'mkd' | 'mon' | 'srp' | 'rus' | 'iso9',
 ): string {
   let newString = '';
 
@@ -27,11 +27,19 @@ export default function cyrillicToLatin(
       newString += mappingAlphabet.macedonian[char] || char;
     } else if (language === 'mon') {
       newString += mappingAlphabet.mongolian[char] || char;
+    } else if (language === 'rus') {
+      newString += mappingAlphabet.russian[char] || char;
     } else if (language === 'srp') {
       newString += mappingAlphabet.serbian[char] || char;
     } else {
       newString += mappingAlphabet.iso9[char] || char;
     }
+  }
+
+  if (language === 'rus') {
+    // GOST recommends to use C before the letters I, E, Y and J
+    newString = newString.replace(/[C]z([ieyj])/gi, `C${'$1'}`);
+    newString = newString.replace(/[c]z([ieyj])/gi, `c${'$1'}`);
   }
 
   return newString;

@@ -39,6 +39,16 @@ test('Should return transliteration for Mongolian lanuage', () => {
   expect(result).toBe('Yerönkhii khel shinjlel edgeer bolno');
 });
 
+test('Should return transliteration for Russian lanuage', () => {
+  const result = cyrillicToLatin('Всяк кулик своё болото хвалит', 'rus');
+  expect(result).toBe('Vsyak kulik svoyo boloto xvalit');
+});
+
+test('Should return transliteration for Russian lanuage with -C exeption', () => {
+  const result = cyrillicToLatin('Цыплят по осени считают', 'rus');
+  expect(result).toBe('Cyplyat po oseni schitayut');
+});
+
 test('Should return transliteration for Serbian lanuage', () => {
   const result = cyrillicToLatin('Овај веб сајт користи колачиће', 'srp');
   expect(result).toBe('Ovaj veb sajt koristi kolačiće');

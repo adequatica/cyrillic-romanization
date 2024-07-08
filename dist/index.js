@@ -18,12 +18,19 @@ export default function cyrillicToLatin(input, language) {
         else if (language === 'mon') {
             newString += mappingAlphabet.mongolian[char] || char;
         }
+        else if (language === 'rus') {
+            newString += mappingAlphabet.russian[char] || char;
+        }
         else if (language === 'srp') {
             newString += mappingAlphabet.serbian[char] || char;
         }
         else {
             newString += mappingAlphabet.iso9[char] || char;
         }
+    }
+    if (language === 'rus') {
+        newString = newString.replace(/[C]z([ieyj])/gi, `C${'$1'}`);
+        newString = newString.replace(/[c]z([ieyj])/gi, `c${'$1'}`);
     }
     return newString;
 }
