@@ -49,9 +49,25 @@ test('Should return transliteration for Russian lanuage with -C exeption', () =>
   expect(result).toBe('Cyplyat po oseni schitayut');
 });
 
+test('Should return transliteration for Belarusian lanuage as for Russian lanuage', () => {
+  const result = cyrillicToLatin('Всяк кулик своё болото хвалит', 'bel');
+  expect(result).toBe('Vsyak kulik svoyo boloto xvalit');
+});
+
 test('Should return transliteration for Serbian lanuage', () => {
   const result = cyrillicToLatin('Овај веб сајт користи колачиће', 'srp');
   expect(result).toBe('Ovaj veb sajt koristi kolačiće');
+});
+
+test('Should return transliteration for Ukrainian lanuage', () => {
+  const result = cyrillicToLatin('Бджола мала, а й та працює', 'ukr');
+  console.log(result);
+  expect(result).toBe('Bdzhola mala, a y ta pratsiuie');
+});
+
+test('Should return transliteration for Ukrainian lanuage with -zgh exeptions', () => {
+  const result = cyrillicToLatin('Згорани розгон', 'ukr');
+  expect(result).toBe('Zghorany rozghon');
 });
 
 test('Should return transliteration for ISO 9 standard', () => {
