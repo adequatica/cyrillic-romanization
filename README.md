@@ -10,9 +10,10 @@ However, ISO 9 is rarely used because it has unusual diacritical letters. Thus:
 
 - [Gaj's Latin alphabet transliteration](https://en.wikipedia.org/wiki/Gaj%27s_Latin_alphabet) is supported for **Serbian, Macedonian, and Montenegrin** alphabets;
 - The _-ia_ exception at the end of the word is supported for **Bulgarian** transliteration;
-- [MNS 5217:2012](https://fr.wikipedia.org/wiki/MNS_5217:2012) standard is supported for **Mongolian** Cyrillic alphabet;
+- [MNS 5217:2012](https://fr.wikipedia.org/wiki/MNS_5217:2012) standard is supported for the **Mongolian** Cyrillic alphabet;
 - For **Russian and Belarusian** languages is used [GOST 7.79-2000 (B)](https://en.wikipedia.org/wiki/GOST_7.79-2000);
-- The **Ukrainian** alphabet is transliterated into Latin by the Ukrainian National system ([BGN/PCGN 2019](https://en.wikipedia.org/wiki/BGN/PCGN_romanization)).
+- The **Ukrainian** alphabet is transliterated into Latin by the Ukrainian national system based on [BGN/PCGN 2019](https://en.wikipedia.org/wiki/BGN/PCGN_romanization);
+- The **Kazakh** alphabet follows the [Decree of the President of the Republic of Kazakhstan dated October 26, 2017, No. 569](https://academy-gp.kz/?p=9661&lang=en); 2021 revision.
 
 ### Installation
 
@@ -43,12 +44,13 @@ cyrillicToLatin(
 
 Language parameter values:
 
-- `iso9` — ISO 9, default (optional);
-- `bel` — Belarusian language;
-- `bul` — Bulgarian language;
-- `cnr` — Montenegrin language;
-- `mkd` — Macedonian language;
-- `mon` — Mongolian language;
-- `rus` — Russian language;
-- `srp` — Serbian language;
-- `ukr` — Ukrainian language.
+1. `iso9` — ISO 9, default (optional);
+2. `bel` — Belarusian language;
+3. `bul` — Bulgarian language;
+4. `cnr` — Montenegrin language;
+5. `kaz` — Kazakh language;
+6. `mkd` — Macedonian language;
+7. `mon` — Mongolian language;
+8. `rus` — Russian language;
+9. `srp` — Serbian language;
+10. `ukr` — Ukrainian language.

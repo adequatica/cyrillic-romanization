@@ -1,12 +1,13 @@
 {
   "name": "cyrillic-romanization",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Convert Cyrillic characters to Latin characters (transliteration)",
   "keywords": [
     "belarusian",
     "bulgarian",
     "cyrillic",
     "iso9",
+    "kazakh",
     "latin",
     "macedonian",
     "mongolian",

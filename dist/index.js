@@ -26,6 +26,9 @@ export default function cyrillicToLatin(input, language) {
         else if (language === 'cnr') {
             newString += mappingAlphabet.montenegrin[char] || char;
         }
+        else if (language === 'kaz') {
+            newString += mappingAlphabet.kazakh[char] || char;
+        }
         else if (language === 'mkd') {
             newString += mappingAlphabet.macedonian[char] || char;
         }

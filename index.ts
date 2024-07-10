@@ -8,6 +8,7 @@ export default function cyrillicToLatin(
     | 'bel'
     | 'bul'
     | 'cnr'
+    | 'kaz'
     | 'mkd'
     | 'mon'
     | 'rus'
@@ -51,6 +52,8 @@ export default function cyrillicToLatin(
       newString += mappingAlphabet.bulgarian[char] || char;
     } else if (language === 'cnr') {
       newString += mappingAlphabet.montenegrin[char] || char;
+    } else if (language === 'kaz') {
+      newString += mappingAlphabet.kazakh[char] || char;
     } else if (language === 'mkd') {
       newString += mappingAlphabet.macedonian[char] || char;
     } else if (language === 'mon') {

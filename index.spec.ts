@@ -24,6 +24,11 @@ test('Should return transliteration for Bulgarian lanuage with -ia exeption', ()
   expect(result).toBe('Svetia prosvetiyateli Metodiy i Kiril');
 });
 
+test('Should return transliteration for Kazakh language', () => {
+  const result = cyrillicToLatin('Жортар аттың тоғы игі', 'kaz');
+  expect(result).toBe('Jortar attyñ toğy иgı');
+});
+
 test('Should return transliteration for Montenegrin lanuage', () => {
   const result = cyrillicToLatin('З́ је 10 слово у црногорској азбуци', 'cnr');
   expect(result).toBe('Ź je 10 slovo u crnogorskoj azbuci');
