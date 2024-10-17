@@ -14,6 +14,11 @@ test('Should not transliterate Latin script', () => {
   expect(result).toBe(input);
 });
 
+test('Should return transliteration for ALA-LC romanization for Russian', () => {
+  const result = cyrillicToLatin('Лёша на полке клопа нашёл', 'alalc');
+  expect(result).toBe('Lësha na polke klopa nashël');
+});
+
 test('Should return transliteration for Bulgarian lanuage', () => {
   const result = cyrillicToLatin('Свети просветители Методий и Кирил', 'bul');
   expect(result).toBe('Sveti prosvetiteli Metodiy i Kiril');
@@ -24,14 +29,29 @@ test('Should return transliteration for Bulgarian lanuage with -ia exeption', ()
   expect(result).toBe('Svetia prosvetiyateli Metodiy i Kiril');
 });
 
-test('Should return transliteration for Kazakh language', () => {
-  const result = cyrillicToLatin('Жортар аттың тоғы игі', 'kaz');
-  expect(result).toBe('Jortar attyñ toğy иgı');
+test('Should return transliteration for Ukrainian lanuage', () => {
+  const result = cyrillicToLatin('Бджола мала, а й та працює', 'ukr');
+  expect(result).toBe('Bdzhola mala, a y ta pratsiuie');
+});
+
+test('Should return transliteration for Ukrainian lanuage with -zgh exeptions', () => {
+  const result = cyrillicToLatin('Згорани розгон', 'ukr');
+  expect(result).toBe('Zghorany rozghon');
+});
+
+test('Should return transliteration for Uzbek lanuage', () => {
+  const result = cyrillicToLatin('Ҳунарли киши оч қолмас', 'uzb');
+  expect(result).toBe('Hunarli kişi oc qolmas');
 });
 
 test('Should return transliteration for Montenegrin lanuage', () => {
   const result = cyrillicToLatin('З́ је 10 слово у црногорској азбуци', 'cnr');
   expect(result).toBe('Ź je 10 slovo u crnogorskoj azbuci');
+});
+
+test('Should return transliteration for Kazakh language', () => {
+  const result = cyrillicToLatin('Жортар аттың тоғы игі', 'kaz');
+  expect(result).toBe('Jortar attyñ toğy иgı');
 });
 
 test('Should return transliteration for Makedonian lanuage', () => {
@@ -62,17 +82,6 @@ test('Should return transliteration for Belarusian lanuage as for Russian lanuag
 test('Should return transliteration for Serbian lanuage', () => {
   const result = cyrillicToLatin('Овај веб сајт користи колачиће', 'srp');
   expect(result).toBe('Ovaj veb sajt koristi kolačiće');
-});
-
-test('Should return transliteration for Ukrainian lanuage', () => {
-  const result = cyrillicToLatin('Бджола мала, а й та працює', 'ukr');
-  console.log(result);
-  expect(result).toBe('Bdzhola mala, a y ta pratsiuie');
-});
-
-test('Should return transliteration for Ukrainian lanuage with -zgh exeptions', () => {
-  const result = cyrillicToLatin('Згорани розгон', 'ukr');
-  expect(result).toBe('Zghorany rozghon');
 });
 
 test('Should return transliteration for ISO 9 standard', () => {

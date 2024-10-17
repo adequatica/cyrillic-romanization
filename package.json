@@ -1,13 +1,17 @@
 {
   "name": "cyrillic-romanization",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Convert Cyrillic characters to Latin characters (transliteration)",
   "keywords": [
+    "ala-lc",
+    "alphabet",
     "belarusian",
     "bulgarian",
     "cyrillic",
+    "gaj",
     "iso9",
     "kazakh",
+    "language",
     "latin",
     "macedonian",
     "mongolian",
@@ -16,7 +20,9 @@
     "russian",
     "serbian",
     "transliteration",
-    "ukrainian"
+    "turkmen",
+    "ukrainian",
+    "uzbek"
   ],
   "repository": {
     "type": "git",

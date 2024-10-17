@@ -18,9 +18,16 @@ export default function cyrillicToLatin(input, language) {
         input = input.replace(/Зг/g, 'Zgh');
         input = input.replace(/зг/g, 'zgh');
     }
+    if (language === 'uzb') {
+        input = input.replace(/(?<!\S)Е/g, 'Ye');
+        input = input.replace(/(?<!\S)е/g, 'ye');
+    }
     for (let i = 0; i < input.length; i++) {
         const char = input[i];
-        if (language === 'bul') {
+        if (language === 'alalc') {
+            newString += mappingAlphabet.alalc[char] || char;
+        }
+        else if (language === 'bul') {
             newString += mappingAlphabet.bulgarian[char] || char;
         }
         else if (language === 'cnr') {
@@ -43,6 +50,9 @@ export default function cyrillicToLatin(input, language) {
         }
         else if (language === 'ukr') {
             newString += mappingAlphabet.ukrainian[char] || char;
+        }
+        else if (language === 'uzb') {
+            newString += mappingAlphabet.uzbek[char] || char;
         }
         else {
             newString += mappingAlphabet.iso9[char] || char;

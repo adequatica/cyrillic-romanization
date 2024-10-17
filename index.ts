@@ -5,6 +5,7 @@ export default function cyrillicToLatin(
   // Code names of languages according to ISO 639-2:1998
   language?:
     | 'iso9'
+    | 'alalc'
     | 'bel'
     | 'bul'
     | 'cnr'
@@ -13,7 +14,8 @@ export default function cyrillicToLatin(
     | 'mon'
     | 'rus'
     | 'srp'
-    | 'ukr',
+    | 'ukr'
+    | 'uzb',
 ): string {
   let newString = '';
 
@@ -44,9 +46,17 @@ export default function cyrillicToLatin(
     input = input.replace(/зг/g, 'zgh');
   }
 
+  if (language === 'uzb') {
+    // Е at the beginning of words are used as "Ye"
+    input = input.replace(/(?<!\S)Е/g, 'Ye');
+    input = input.replace(/(?<!\S)е/g, 'ye');
+  }
+
   for (let i = 0; i < input.length; i++) {
     const char = input[i];
-    if (language === 'bul') {
+    if (language === 'alalc') {
+      newString += mappingAlphabet.alalc[char] || char;
+    } else if (language === 'bul') {
       // "-ия" exception was replaced with "-ia" in the previous condition;
       // thus, Latin characters are not affected by this transformation
       newString += mappingAlphabet.bulgarian[char] || char;
@@ -64,6 +74,8 @@ export default function cyrillicToLatin(
       newString += mappingAlphabet.serbian[char] || char;
     } else if (language === 'ukr') {
       newString += mappingAlphabet.ukrainian[char] || char;
+    } else if (language === 'uzb') {
+      newString += mappingAlphabet.uzbek[char] || char;
     } else {
       newString += mappingAlphabet.iso9[char] || char;
     }
