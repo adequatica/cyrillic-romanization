@@ -1,6 +1,6 @@
 {
   "name": "cyrillic-romanization",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Convert Cyrillic characters to Latin characters (transliteration)",
   "keywords": [
     "ala-lc",
@@ -32,7 +32,7 @@
   "license": "MIT",
   "type": "module",
   "engines": {
-    "node": ">=21"
+    "node": ">=20"
   },
   "main": "dist/index.js",
   "devDependencies": {
@@ -47,7 +47,7 @@
     "tsc-alias": "1.8.10",
     "typescript": "5.5.4",
     "typescript-eslint": "8.7.0",
-    "vitest": "2.1.3"
+    "vitest": "3.0.5"
   },
   "scripts": {
     "build": "tsc --project tsconfig-tsc-alias.json && tsc-alias -p tsconfig-tsc-alias.json",
