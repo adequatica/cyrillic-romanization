@@ -19,6 +19,11 @@ test('Should return transliteration for ALA-LC romanization for Russian', () => 
   expect(result).toBe('Lësha na polke klopa nashël');
 });
 
+test('Should return transliteration for Azerbaijani lanuage', () => {
+  const result = cyrillicToLatin('Эй гәһрәман өвладын шанлы Вәтәни', 'aze');
+  expect(result).toBe('Ey qəhrəman övladın şanlı Vətəni');
+});
+
 test('Should return transliteration for Bulgarian lanuage', () => {
   const result = cyrillicToLatin('Свети просветители Методий и Кирил', 'bul');
   expect(result).toBe('Sveti prosvetiteli Metodiy i Kiril');

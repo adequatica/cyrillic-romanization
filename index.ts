@@ -1,4 +1,4 @@
-import { mappingAlphabet } from 'mapping';
+import { mappingAlphabet } from './mapping';
 
 export default function cyrillicToLatin(
   input: string,
@@ -6,6 +6,7 @@ export default function cyrillicToLatin(
   language?:
     | 'iso9'
     | 'alalc'
+    | 'aze'
     | 'bel'
     | 'bul'
     | 'cnr'
@@ -33,7 +34,7 @@ export default function cyrillicToLatin(
     input = input.replace(/(?<!\S)Є/g, 'Ye');
     input = input.replace(/(?<!\S)є/g, 'ye');
     input = input.replace(/(?<!\S)Ї/g, 'Yi');
-    input = input.replace(/(?<!\S)i/g, 'yi');
+    input = input.replace(/(?<!\S)ї/g, 'yi');
     input = input.replace(/(?<!\S)Й/g, 'Y');
     input = input.replace(/(?<!\S)й/g, 'y');
     input = input.replace(/(?<!\S)Ю/g, 'Yu');
@@ -52,10 +53,11 @@ export default function cyrillicToLatin(
     input = input.replace(/(?<!\S)е/g, 'ye');
   }
 
-  for (let i = 0; i < input.length; i++) {
-    const char = input[i];
+  for (const char of input) {
     if (language === 'alalc') {
       newString += mappingAlphabet.alalc[char] || char;
+    } else if (language === 'aze') {
+      newString += mappingAlphabet.azerbaijani[char] || char;
     } else if (language === 'bul') {
       // "-ия" exception was replaced with "-ia" in the previous condition;
       // thus, Latin characters are not affected by this transformation

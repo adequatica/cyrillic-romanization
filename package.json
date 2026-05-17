@@ -36,30 +36,20 @@
   },
   "main": "dist/index.js",
   "devDependencies": {
-    "@eslint/js": "9.12.0",
-    "@stylistic/eslint-plugin-ts": "2.9.0",
-    "@types/eslint__js": "8.42.3",
-    "@typescript-eslint/parser": "8.10.0",
-    "eslint": "9.12.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "prettier": "3.3.3",
-    "tsc-alias": "1.8.10",
-    "typescript": "5.5.4",
-    "typescript-eslint": "8.7.0",
-    "vitest": "3.0.5"
+    "@eslint/js": "9.39.4",
+    "eslint": "10.4.0",
+    "globals": "17.6.0",
+    "prettier": "3.8.3",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.59.3",
+    "vitest": "4.1.6"
   },
   "scripts": {
-    "build": "tsc --project tsconfig-tsc-alias.json && tsc-alias -p tsconfig-tsc-alias.json",
+    "build": "tsc --project tsconfig.build.json",
     "format": "npx prettier --write .",
     "lint": "eslint '**/*.{js,ts}'",
     "lint:fix": "eslint --fix",
     "test": "vitest run"
-  },
-  "prettier": {
-    "tabWidth": 2,
-    "useTabs": false,
-    "singleQuote": true
   },
   "files": [
     "dist",

@@ -1,6 +1,19 @@
-interface Alphabet {
-  [key: string]: { [key: string]: string };
-}
+type CharMap = { [key: string]: string };
+
+type Alphabet = {
+  iso9: CharMap;
+  alalc: CharMap;
+  azerbaijani: CharMap;
+  bulgarian: CharMap;
+  kazakh: CharMap;
+  macedonian: CharMap;
+  mongolian: CharMap;
+  montenegrin: CharMap;
+  russian: CharMap;
+  serbian: CharMap;
+  ukrainian: CharMap;
+  uzbek: CharMap;
+};
 
 export const mappingAlphabet: Alphabet = {
   // https://en.wikipedia.org/wiki/ISO_9
@@ -334,6 +347,73 @@ export const mappingAlphabet: Alphabet = {
     ѳ: 'ḟ',
     Ѵ: 'Ẏ',
     ѵ: 'ẏ',
+  },
+  // https://en.wikipedia.org/wiki/Azerbaijani_alphabet
+  azerbaijani: {
+    А: 'A',
+    Б: 'B',
+    Ҹ: 'C',
+    Ч: 'Ç',
+    Д: 'D',
+    Э: 'E',
+    Ә: 'Ə',
+    Ф: 'F',
+    Ҝ: 'G',
+    Ғ: 'Ğ',
+    Һ: 'H',
+    Х: 'X',
+    Ы: 'I',
+    И: 'İ',
+    Ж: 'J',
+    К: 'K',
+    Г: 'Q',
+    Л: 'L',
+    М: 'M',
+    Н: 'N',
+    О: 'O',
+    Ө: 'Ö',
+    П: 'P',
+    Р: 'R',
+    С: 'S',
+    Ш: 'Ş',
+    Т: 'T',
+    У: 'U',
+    Ү: 'Ü',
+    В: 'V',
+    Й: 'Y',
+    З: 'Z',
+    а: 'a',
+    б: 'b',
+    ҹ: 'c',
+    ч: 'ç',
+    э: 'e',
+    д: 'd',
+    ф: 'f',
+    ә: 'ə',
+    ҝ: 'g',
+    ғ: 'ğ',
+    һ: 'h',
+    х: 'x',
+    ы: 'ı',
+    ж: 'j',
+    и: 'i',
+    г: 'q',
+    к: 'k',
+    л: 'l',
+    м: 'm',
+    н: 'n',
+    о: 'o',
+    ө: 'ö',
+    п: 'p',
+    р: 'r',
+    с: 's',
+    ш: 'ş',
+    т: 't',
+    у: 'u',
+    ү: 'ü',
+    в: 'v',
+    й: 'y',
+    з: 'z',
   },
   // https://en.wikipedia.org/wiki/Bulgarian_alphabet
   // https://en.wikipedia.org/wiki/Romanization_of_Bulgarian

@@ -1,4 +1,4 @@
-import { mappingAlphabet } from './mapping.js';
+import { mappingAlphabet } from './mapping';
 export default function cyrillicToLatin(input, language) {
     let newString = '';
     if (language === 'bul') {
@@ -8,7 +8,7 @@ export default function cyrillicToLatin(input, language) {
         input = input.replace(/(?<!\S)Є/g, 'Ye');
         input = input.replace(/(?<!\S)є/g, 'ye');
         input = input.replace(/(?<!\S)Ї/g, 'Yi');
-        input = input.replace(/(?<!\S)i/g, 'yi');
+        input = input.replace(/(?<!\S)ї/g, 'yi');
         input = input.replace(/(?<!\S)Й/g, 'Y');
         input = input.replace(/(?<!\S)й/g, 'y');
         input = input.replace(/(?<!\S)Ю/g, 'Yu');
@@ -22,10 +22,12 @@ export default function cyrillicToLatin(input, language) {
         input = input.replace(/(?<!\S)Е/g, 'Ye');
         input = input.replace(/(?<!\S)е/g, 'ye');
     }
-    for (let i = 0; i < input.length; i++) {
-        const char = input[i];
+    for (const char of input) {
         if (language === 'alalc') {
             newString += mappingAlphabet.alalc[char] || char;
+        }
+        else if (language === 'aze') {
+            newString += mappingAlphabet.azerbaijani[char] || char;
         }
         else if (language === 'bul') {
             newString += mappingAlphabet.bulgarian[char] || char;

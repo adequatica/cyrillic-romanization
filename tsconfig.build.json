@@ -1,5 +1,5 @@
 {
-  "include": ["**/*.ts"],
+  "include": ["index.ts"],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     // Project Structure
@@ -11,9 +11,11 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
 
     // Emit Options
-    "noEmit": true,
+    "noEmit": false,
     "erasableSyntaxOnly": true,
 
     // Type Checking
@@ -32,6 +34,7 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true,
 
     // Build
     "target": "es2015",
