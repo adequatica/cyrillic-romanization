@@ -9,12 +9,13 @@ Default transliteration works according to **[ISO 9:1995](https://en.wikipedia.
 However, ISO 9 is rarely used in practice because it has unusual diacritical letters. Thus:
 
 - [Gaj's Latin alphabet transliteration](https://en.wikipedia.org/wiki/Gaj%27s_Latin_alphabet) is supported for the **Serbian, Macedonian, and Montenegrin** alphabets;
-- The **Azerbaijani** transliteration uses the contemporary (from 16 May 1992) form of the grapheme [schwa](<https://en.wikipedia.org/wiki/Schwa_(letter)>) instead of A-[diaeresis](<https://en.wikipedia.org/wiki/Diaeresis_(diacritic)>);
+- The **Azerbaijani** transliteration uses the contemporary form of the grapheme [schwa](<https://en.wikipedia.org/wiki/Schwa_(letter)>) instead of A-[diaeresis](<https://en.wikipedia.org/wiki/Diaeresis_(diacritic)>) (1992);
 - The _-ia_ exception at the end of a word is supported for **Bulgarian** transliteration;
 - The **Kazakh** transliteration follows the [Decree of the President of the Republic of Kazakhstan dated October 26, 2017, No. 569](https://academy-gp.kz/?p=9661&lang=en), 2021 revision;
 - The [MNS 5217:2012](https://fr.wikipedia.org/wiki/MNS_5217:2012) standard is supported for the **Mongolian** Cyrillic alphabet;
 - For **Russian and Belarusian**, [GOST 7.79-2000 (B)](https://en.wikipedia.org/wiki/GOST_7.79-2000) is used;
 - An additional [ALA-LC romanization](https://en.wikipedia.org/wiki/ALA-LC_romanization_for_Russian) system is supported for Russian;
+- The **Turkmen** transliteration uses contemporary conventional letter symbols (1999);
 - The **Ukrainian** Cyrillic alphabet is transliterated into Latin by the Ukrainian national system based on [BGN/PCGN 2019](https://en.wikipedia.org/wiki/BGN/PCGN_romanization);
 - For **Uzbek** romanization, the [Latin-based alphabet](https://en.wikipedia.org/wiki/Uzbek_alphabet#Modern_Latin_alphabet) is used (proposed version from 2023).
 
@@ -60,5 +61,6 @@ cyrillicToLatin(
 9. `mon` — Mongolian language;
 10. `rus` — Russian language;
 11. `srp` — Serbian language;
-12. `ukr` — Ukrainian language;
-13. `uzb` — Uzbek language.
+12. `tuk` — Turkmen language;
+13. `ukr` — Ukrainian language;
+14. `uzb` — Uzbek language.

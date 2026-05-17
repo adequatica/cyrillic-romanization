@@ -12,6 +12,7 @@ type Alphabet = {
     montenegrin: CharMap;
     russian: CharMap;
     serbian: CharMap;
+    turkmen: CharMap;
     ukrainian: CharMap;
     uzbek: CharMap;
 };

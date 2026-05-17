@@ -89,6 +89,16 @@ test('Should return transliteration for Serbian lanuage', () => {
   expect(result).toBe('Ovaj veb sajt koristi kolačiće');
 });
 
+test('Should return transliteration for Turkmen lanuage', () => {
+  const result = cyrillicToLatin(
+    'Хемме адамлар өз мертебеси ве хукуклары боюнча дең ягдайда дүнйә инйәрлер',
+    'tuk',
+  );
+  expect(result).toBe(
+    'Hemme adamlar öz mertebesi we hukuklary boýunça deň ýagdaýda dünýä inýärler',
+  );
+});
+
 test('Should return transliteration for ISO 9 standard', () => {
   const result = cyrillicToLatin(
     'Ћирилица је изведена из грчког унцијала',

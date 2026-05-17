@@ -1,6 +1,6 @@
 {
   "name": "cyrillic-romanization",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Convert Cyrillic characters to Latin characters (transliteration)",
   "keywords": [
     "ala-lc",

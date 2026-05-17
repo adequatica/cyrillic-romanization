@@ -15,6 +15,7 @@ export default function cyrillicToLatin(
     | 'mon'
     | 'rus'
     | 'srp'
+    | 'tuk'
     | 'ukr'
     | 'uzb',
 ): string {
@@ -74,6 +75,8 @@ export default function cyrillicToLatin(
       newString += mappingAlphabet.russian[char] || char;
     } else if (language === 'srp') {
       newString += mappingAlphabet.serbian[char] || char;
+    } else if (language === 'tuk') {
+      newString += mappingAlphabet.turkmen[char] || char;
     } else if (language === 'ukr') {
       newString += mappingAlphabet.ukrainian[char] || char;
     } else if (language === 'uzb') {

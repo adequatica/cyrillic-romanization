@@ -50,6 +50,9 @@ export default function cyrillicToLatin(input, language) {
         else if (language === 'srp') {
             newString += mappingAlphabet.serbian[char] || char;
         }
+        else if (language === 'tuk') {
+            newString += mappingAlphabet.turkmen[char] || char;
+        }
         else if (language === 'ukr') {
             newString += mappingAlphabet.ukrainian[char] || char;
         }
