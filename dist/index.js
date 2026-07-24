@@ -1,4 +1,4 @@
-import { mappingAlphabet } from './mapping';
+import { mappingAlphabet } from './mapping.js';
 export default function cyrillicToLatin(input, language) {
     let newString = '';
     if (language === 'bul') {

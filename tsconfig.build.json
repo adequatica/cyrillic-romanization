@@ -11,7 +11,7 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "baseUrl": ".",
 
     // Emit Options
@@ -38,7 +38,7 @@
 
     // Build
     "target": "es2015",
-    "module": "es2015",
+    "module": "node16",
     "outDir": "./dist",
     "removeComments": true
   }

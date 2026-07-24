@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 
-import cyrillicToLatin from './index';
+import cyrillicToLatin from './index.js';
 
 test('Should handle empty string', () => {
   const input = '';
