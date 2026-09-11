@@ -99,6 +99,16 @@ test('Should return transliteration for Turkmen lanuage', () => {
   );
 });
 
+test('Should return transliteration for Interslavic language', () => {
+  const result = cyrillicToLatin(
+    'Боли мнє срдце, когда виджу, како чловєк владаје коњами.',
+    'isv',
+  );
+  expect(result).toBe(
+    'Boli mně srdce, kogda vidžu, kako člověk vladaje konjami.',
+  );
+});
+
 test('Should return transliteration for ISO 9 standard', () => {
   const result = cyrillicToLatin(
     'Ћирилица је изведена из грчког унцијала',

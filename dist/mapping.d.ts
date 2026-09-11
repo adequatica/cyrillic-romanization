@@ -6,6 +6,7 @@ type Alphabet = {
     alalc: CharMap;
     azerbaijani: CharMap;
     bulgarian: CharMap;
+    interslavic: CharMap;
     kazakh: CharMap;
     macedonian: CharMap;
     mongolian: CharMap;

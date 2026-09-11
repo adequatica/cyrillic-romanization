@@ -2,7 +2,7 @@ import { mappingAlphabet } from './mapping.js';
 
 export default function cyrillicToLatin(
   input: string,
-  // Code names of languages according to ISO 639-2:1998
+  // Code names of languages according to ISO 639-3
   language?:
     | 'iso9'
     | 'alalc'
@@ -10,6 +10,7 @@ export default function cyrillicToLatin(
     | 'bel'
     | 'bul'
     | 'cnr'
+    | 'isv'
     | 'kaz'
     | 'mkd'
     | 'mon'
@@ -65,6 +66,8 @@ export default function cyrillicToLatin(
       newString += mappingAlphabet.bulgarian[char] || char;
     } else if (language === 'cnr') {
       newString += mappingAlphabet.montenegrin[char] || char;
+    } else if (language === 'isv') {
+      newString += mappingAlphabet.interslavic[char] || char;
     } else if (language === 'kaz') {
       newString += mappingAlphabet.kazakh[char] || char;
     } else if (language === 'mkd') {

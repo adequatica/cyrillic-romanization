@@ -1,6 +1,6 @@
 {
   "name": "cyrillic-romanization",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Convert Cyrillic characters to Latin characters (transliteration)",
   "keywords": [
     "ala-lc",
@@ -10,11 +10,13 @@
     "bulgarian",
     "cyrillic",
     "gaj",
+    "interslavic",
     "iso9",
     "kazakh",
     "language",
     "latin",
     "macedonian",
+    "medžuslovjansky",
     "mongolian",
     "montenegrin",
     "romanization",
@@ -38,12 +40,12 @@
   "main": "dist/index.js",
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "eslint": "10.7.0",
-    "globals": "17.7.0",
+    "eslint": "10.10.0",
+    "globals": "17.12.0",
     "prettier": "3.9.6",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.65.0",
-    "vitest": "4.1.10"
+    "typescript-eslint": "8.70.0",
+    "vitest": "4.1.11"
   },
   "scripts": {
     "build": "tsc --project tsconfig.build.json",

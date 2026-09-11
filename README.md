@@ -11,6 +11,7 @@ However, ISO 9 is rarely used in practice because it has unusual diacritical let
 - [Gaj's Latin alphabet transliteration](https://en.wikipedia.org/wiki/Gaj%27s_Latin_alphabet) is supported for the **Serbian, Macedonian, and Montenegrin** alphabets;
 - The **Azerbaijani** transliteration uses the contemporary form of the grapheme [schwa](<https://en.wikipedia.org/wiki/Schwa_(letter)>) instead of A-[diaeresis](<https://en.wikipedia.org/wiki/Diaeresis_(diacritic)>) (1992);
 - The _-ia_ exception at the end of a word is supported for **Bulgarian** transliteration;
+- The **Interslavic** (medžuslovjansky) transliteration is based on the [official orthography’s](http://steen.free.fr/interslavic/orthography.html) correspondence between letters.
 - The **Kazakh** transliteration follows the [Decree of the President of the Republic of Kazakhstan dated October 26, 2017, No. 569](https://academy-gp.kz/?p=9661&lang=en), 2021 revision;
 - The [MNS 5217:2012](https://fr.wikipedia.org/wiki/MNS_5217:2012) standard is supported for the **Mongolian** Cyrillic alphabet;
 - For **Russian and Belarusian**, [GOST 7.79-2000 (B)](https://en.wikipedia.org/wiki/GOST_7.79-2000) is used;
@@ -56,11 +57,12 @@ cyrillicToLatin(
 4. `bel` — Belarusian language;
 5. `bul` — Bulgarian language;
 6. `cnr` — Montenegrin language;
-7. `kaz` — Kazakh language;
-8. `mkd` — Macedonian language;
-9. `mon` — Mongolian language;
-10. `rus` — Russian language;
-11. `srp` — Serbian language;
-12. `tuk` — Turkmen language;
-13. `ukr` — Ukrainian language;
-14. `uzb` — Uzbek language.
+7. `isv` — Interslavic language;
+8. `kaz` — Kazakh language;
+9. `mkd` — Macedonian language;
+10. `mon` — Mongolian language;
+11. `rus` — Russian language;
+12. `srp` — Serbian language;
+13. `tuk` — Turkmen language;
+14. `ukr` — Ukrainian language;
+15. `uzb` — Uzbek language.
